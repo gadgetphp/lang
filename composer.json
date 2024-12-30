@@ -1,0 +1,44 @@
+{
+  "name": "gadgetphp/lang",
+  "type": "library",
+  "homepage": "https://github.com/gadgetphp/lang",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Melody Kimball",
+      "role": "lead"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/gadgetphp/lang/issues",
+    "wiki": "https://github.com/gadgetphp/lang/wiki",
+    "source": "https://github.com/gadgetphp/lang"
+  },
+  "require": {
+    "php": "^8.1",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "gadgetphp/code-style": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Gadget\\Lang\\": [
+        "src/Exception/",
+        "src/Util/"
+      ]
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "apcu-autoloader": true
+  },
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs",
+    "phpstan": "vendor/bin/phpstan analyse -c phpstan.neon"
+  }
+}
